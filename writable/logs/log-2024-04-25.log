@@ -1,0 +1,7 @@
+CRITICAL - 2024-04-25 12:18:14 --> ArgumentCountError: Too few arguments to function App\Controllers\Editora::excluir(), 0 passed in /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH/Controllers/Editora.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Editora->excluir()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')

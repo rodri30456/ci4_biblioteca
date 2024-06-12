@@ -1,0 +1,74 @@
+CREATE TABLE aluno 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ cpf VARCHAR(20) NOT NULL,  
+ nome VARCHAR(50) NOT NULL,  
+ email VARCHAR(30) NOT NULL,  
+ telefone VARCHAR(20),  
+ turma VARCHAR(2) NOT NULL
+); 
+
+CREATE TABLE autor 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(50) NOT NULL 
+); 
+
+CREATE TABLE editora 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(20) NOT NULL,  
+ email VARCHAR(30),  
+ telefone VARCHAR(20)
+); 
+
+CREATE TABLE obra 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ isbn VARCHAR(25) NOT NULL,  
+ categoria VARCHAR(15) NOT NULL,  
+ ano_publicacao INT NOT NULL,  
+ id_editora INT,
+ FOREIGN KEY(id_editora) references editora(id)
+); 
+
+CREATE TABLE livro 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ disponivel INT NOT NULL,  
+ status VARCHAR(20) NOT NULL DEFAULT 'Íntegro',  
+ id_obra INT,
+ FOREIGN KEY(id_obra) references obra(id)
+); 
+
+CREATE TABLE usuario 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(50) NOT NULL,  
+ email VARCHAR(30) NOT NULL,  
+ senha VARCHAR(15) NOT NULL,  
+ telefone VARCHAR(20)
+); 
+
+CREATE TABLE emprestimo 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ data_inicio INT NOT NULL,  
+ data_fim INT NOT NULL,  
+ data_prazo INT NOT NULL,  
+ id_livro INT,  
+ id_aluno INT,  
+ id_usuario INT,
+ FOREIGN key(id_livro) references livro(id),
+ FOREIGN key(id_aluno) references aluno(id),
+ foreign key(id_usuario) references usuario(id)
+); 
+biblioteca
+CREATE TABLE autor_obra 
+( 
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ id_autor INT,  
+ id_obra INT,
+ foreign key(id_autor) references autor(id),
+ foreign key(id_obra) references obra(id)
+); 

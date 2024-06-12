@@ -1,0 +1,87 @@
+CRITICAL - 2024-03-21 13:25:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "_partials/headerusuario/index.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Usuario.php(12): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:16:17 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:09 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:24 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:25 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:25 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:25 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:25 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:53 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:25:54 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:26:29 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-03-21 14:27:05 --> Error: Call to a member function findAll() on null
+in APPPATH/Controllers/Usuario.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Usuario->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
