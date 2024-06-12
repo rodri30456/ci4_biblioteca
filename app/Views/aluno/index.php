@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($listaAluno as $a) : ?>
+            <?php foreach($listaAlunos as $a) : ?>
                 <tr>
                     <td><?=$a['id']?></td>
                     <td><?=$a['cpf']?></td>

@@ -11,24 +11,25 @@
                 <td>ID</td>
                 <td>Disponivel</td>
                 <td>Status</td>
-                <td>Id_obra</td>
+                <td>Obra</td>
             </tr>
         </thead>
         <tbody>
-            <?php foreach($listaLivro as $u) : ?>
+            <?php foreach($listaLivro as $livro) : ?>
                 <tr>
-                    <td><?=$u['id']?></td>
+                    <td><?=$livro['id']?></td>
                     <td>
-                        <?=anchor("Livro/editar/".$u['id'],$u['disponivel'])?>
+                        <?=anchor("Livro/editar/".$livro['id'],$livro['disponivel'])?>
                     </td>
-                    <td><?=$u['status']?></td>
-                    <td><?=$u['id_obra']?></td>
+                    <td><?=$livro['status']?></td>
+                    <td>
                     <?php
                     foreach($listaObra as $obra){
-                        $obra[$obra['id']] = $obra['titulo'];
+                        $livros[$obra['id']] = $obra['titulo'];
                     }
 
                     ?>
+                    <?=$livros[$livro['id_obra']];?></td>
                 </tr>
             <?php endforeach ?>
         </tbody>

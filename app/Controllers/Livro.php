@@ -32,9 +32,11 @@
         }
         public function editar($id){
             $dados = $this -> livroModel -> find($id);
+            $obra = $this -> obraModel -> findAll();
+
             echo view('_partials/header');
             echo view('_partials/navbar');
-            echo view('livro/edit', ['livro'=> $dados]);
+            echo view('livro/edit', ['livro' => $dados, 'listaObra' => $obra]);
             echo view('_partials/footer');
         }
         public function salvar(){
