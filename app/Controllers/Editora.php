@@ -18,7 +18,7 @@ class Editora extends BaseController
         $dados = $this->editoraModel->findAll();
         echo view('_partials/header');
         echo view('_partials/navbar');
-        echo view('editora/index.php',['listaEditora' => $dados]);
+        echo view('editora/index',['listaEditora' => $dados]);
         echo view('_partials/footer');
     }
 

@@ -1,0 +1,53 @@
+<?php namespace App\Controllers;
+
+use CodeIgniter\Controller;
+use CodeIgniter\Session\Session;
+
+class Login extends Controller
+{
+    public function __construct(){
+    $this->session = \Config\Services::session();
+    }
+    
+    public function index()
+    {
+        echo view('_partials/header');
+        echo view('_partials/navbarLogin');
+        echo view('_partials/footer');
+
+        return view('login/index.php');
+    }
+
+    public function authenticate()
+    {
+        $email = $this->request->getPost('email');
+        $senha = $this->request->getPost('senha');
+
+        if (empty($email) || empty($senha)) {
+            return redirect()->back()->withInput()->with('error', 'Preencha todos os campos!');
+        }
+
+        $db = \Config\Database::connect();
+
+        $query = $db->table('usuario')->where('email', $email)->where('senha', $senha)->get();
+
+        if ($query->getNumRows() < 0) {
+            
+            $this->session->set('logged_in', true);
+            $this->session->set('email', $email);
+
+            return redirect()->to(base_url('Home/index'));
+        } else {
+            
+            return redirect()->back()->withInput()->with('error', 'Email ou senha incorretos!');
+        }
+    }
+
+    public function logout()
+    {
+        
+        $this->session->destroy();
+
+        return redirect()->to(base_url('login'));
+    }
+}

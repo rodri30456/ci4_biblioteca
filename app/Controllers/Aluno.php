@@ -17,7 +17,7 @@ class Aluno extends BaseController{
         $dados = $this->alunoModel->findAll();
         echo view('_partials/header');
         echo view('_partials/navbar');
-        echo view('aluno/index.php',['listaAlunos' => $dados]);
+        echo view('aluno/index',['listaAlunos' => $dados]);
         echo view('_partials/footer');
     }
 
