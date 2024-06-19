@@ -14,6 +14,9 @@ class Login extends Controller
         echo view('_partials/header');
         echo view('_partials/navbarLogin');
         echo view('_partials/footer');
+        if ($this->session->has('logged_in')) {
+            return redirect()->to(base_url('Home/index'));
+        }
 
         return view('login/index.php');
     }
@@ -31,7 +34,7 @@ class Login extends Controller
 
         $query = $db->table('usuario')->where('email', $email)->where('senha', $senha)->get();
 
-        if ($query->getNumRows() < 0) {
+        if ($query->getNumRows() > 0) {
             
             $this->session->set('logged_in', true);
             $this->session->set('email', $email);
@@ -47,7 +50,6 @@ class Login extends Controller
     {
         
         $this->session->destroy();
-
         return redirect()->to(base_url('login'));
     }
 }
