@@ -56,6 +56,7 @@ class Emprestimo extends BaseController
     public function salvar(){
         $emprestimo = $this->request->getPost();
         $this->emprestimoModel->save($emprestimo);
+        $this->livroModel->update();
         return redirect() -> to('Emprestimo/index');
     }
     

@@ -2,9 +2,9 @@
 
 use CodeIgniter\Controller;
 use CodeIgniter\Session\Session;
-
 class Login extends Controller
 {
+
     public function __construct(){
     $this->session = \Config\Services::session();
     }
@@ -38,6 +38,7 @@ class Login extends Controller
             
             $this->session->set('logged_in', true);
             $this->session->set('email', $email);
+         
 
             return redirect()->to(base_url('Home/index'));
         } else {

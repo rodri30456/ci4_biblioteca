@@ -147,3 +147,177 @@ INFO - 2024-06-19 11:04:20 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-19 11:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-19 11:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-19 11:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-19 16:15:06 --> ErrorException: Undefined global variable $_SESSION
+in APPPATH/Views/home/index.php on line 7.
+ 1 APPPATH/Views/home/index.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/opt/lampp/htdocs/ci4_biblioteca/app/Views/home/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+INFO - 2024-06-19 16:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-19 16:22:34 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(982): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(1068): session()
+10 SYSTEMPATH/CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-06-19 16:23:48 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 APPPATH/Controllers/Login.php(10): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Login->__construct()
+10 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-06-19 16:24:01 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 APPPATH/Controllers/Login.php(10): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Login->__construct()
+10 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-06-19 16:24:02 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 APPPATH/Controllers/Login.php(10): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Login->__construct()
+10 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-06-19 16:24:02 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 APPPATH/Controllers/Login.php(10): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Login->__construct()
+10 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-06-19 16:24:03 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 APPPATH/Controllers/Login.php(10): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Login->__construct()
+10 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+CRITICAL - 2024-06-19 16:24:12 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set()
+ 3 SYSTEMPATH/Config/Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct()
+ 4 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 APPPATH/Controllers/Login.php(10): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Login->__construct()
+10 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+INFO - 2024-06-19 16:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 16:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-19 17:05:29 --> ErrorException: Undefined array key 1
+in APPPATH/Views/emprestimo/index.php on line 33.
+ 1 APPPATH/Views/emprestimo/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/opt/lampp/htdocs/ci4_biblioteca/app/Views/emprestimo/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Emprestimo.php(37): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Emprestimo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
+INFO - 2024-06-19 17:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-19 17:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
