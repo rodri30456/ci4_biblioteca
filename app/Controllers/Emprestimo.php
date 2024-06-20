@@ -6,65 +6,84 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\EmprestimoModel;
 use App\Models\LivroModel;
-use App\Models\UsuarioModel;
 use App\Models\AlunoModel;
-
+use App\Models\UsuarioModel;
+use App\Models\ObraModel;
 
 class Emprestimo extends BaseController
 {
-    private $emprestimoModel;
+    private $EmprestimoModel;
     private $livroModel;
-    private $usuarioModel;
     private $alunoModel;
+    private $usuarioModel;
+    private $obraModel;
     
     public function __construct(){
-        $this->emprestimoModel = new EmprestimoModel();
-        $this->alunoModel = new AlunoModel();
+        $this->EmprestimoModel = new EmprestimoModel();
         $this->livroModel = new LivroModel();
+        $this->alunoModel = new AlunoModel();
         $this->usuarioModel = new UsuarioModel();
-        
-
+        $this->obraModel = new ObraModel();
     }
-    public function index()
-    {
-        $emprestimo = $this -> emprestimoModel -> findall();
-        $livro = $this -> livroModel -> findAll();
-        $aluno = $this -> alunoModel -> findAll();
-        $usuario = $this -> usuarioModel -> findAll();
-
+    
+    public function index(){
+        $emprestimo = $this->EmprestimoModel->findAll();
+        $livro = $this->livroModel->findAll();
+        $dadosobra = $this->obraModel->findAll();
+        $aluno = $this->alunoModel->findAll();
+        $usuario = $this->usuarioModel->findAll();
         echo view('_partials/header');
         echo view('_partials/navbar');
-        echo view('emprestimo/index',['listaEmprestimo' => $emprestimo,'listaLivro' => $livro, 'listaAluno' => $aluno, 'listaUsuario'=> $usuario,]);
+        echo view('emprestimo/index.php',['listaEmprestimo'=>$emprestimo,'listaLivro'=>$livro,'listaAluno'=> $aluno,'listaUsuario'=>$usuario,'listaObra' => $dadosobra]);
         echo view('_partials/footer');
     }
-    public function cadastrar(){
-        $emprestimo = $this -> request -> getPost();
-        $this -> emprestimoModel -> save($emprestimo);
-        return redirect() -> to('Emprestimo/index');
-    }
-    public function editar($id){
-        $emprestimo = $this -> emprestimoModel -> find($id);
-        $aluno = $this -> alunoModel -> findAll();
-        $livro = $this -> livroModel -> findAll();
-        $user = $this -> usuarioModel -> findAll();
 
+    public function cadastrar()
+    {
+        $dados = $this->request->getPost();
+        $this->EmprestimoModel->save($dados);
+        $this->livroModel->update($dados['id_livro'], ['disponivel' => 0]);
+        return redirect()->to('emprestimo/index');
+    }
+    public function editar($id)
+    {
+        $dados = $this->EmprestimoModel->find($id);
+        if($dados['data_fim'] == 0){
+        $this->livroModel->update($dados['id_livro'], ['disponivel' => 1]);};
+        $dadosaluno = $this->alunoModel->findAll();
+        $dadosobra = $this->obraModel->findAll();
+        $dadosusuario = $this->usuarioModel->findAll();
+        $dadoslivro = $this->livroModel->findAll();
         echo view('_partials/header');
         echo view('_partials/navbar');
-        echo view('emprestimo/edit', ['emprestimo' => $emprestimo, 'listaUsuario' => $user, 'listaAluno' => $aluno, 'listaLivro' => $livro]);
+        echo view('emprestimo/edit',['emprestimo' => $dados,'listaAluno' => $dadosaluno,'listaLivro' => $dadoslivro,'listaUsuario' => $dadosusuario,'listaObra' => $dadosobra]);
         echo view('_partials/footer');
     }
     public function salvar(){
-        $emprestimo = $this->request->getPost();
-        $this->emprestimoModel->save($emprestimo);
-        $this->livroModel->update();
-        return redirect() -> to('Emprestimo/index');
+        $dados = $this->request->getPost();
+        $this->EmprestimoModel->save($dados);
+        $this->livroModel->update($dados['id_livro'], ['disponivel' => 0]);
+        return redirect()->to('emprestimo/index');
     }
-    
+    public function salvardev(){
+        $dados = $this->request->getPost();
+        $this->EmprestimoModel->save($dados);
+        $this->livroModel->update($dados['id_livro'], ['disponivel' => 1]);
+        return redirect()->to('emprestimo/index');
+    }
     public function excluir(){
-        $emprestimo = $this->request->getPost();
-        $this->emprestimoModel->delete($emprestimo);
-        return redirect()->to('Emprestimo/index');
+        $dados = $this->request->getPost();
+        $this->EmprestimoModel->delete($dados);
+        return redirect()->to('emprestimo/index');
+    }
+
+    public function devolucao($id){
+        $emprestimo = $this->EmprestimoModel->find($id);
+        $dadosobra = $this->obraModel->findAll();
+        $livro = $this->livroModel->findAll();
+        echo view('_partials/header');
+        echo view('_partials/navbar');
+        echo view('devolução/index.php',['emprestimo'=>$emprestimo,'listaLivro'=>$livro,'listaObra' => $dadosobra]);
+        echo view('_partials/footer');
     }
 }
-
-
